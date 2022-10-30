@@ -112,6 +112,8 @@ body {
 
 .body-content {
 	display: flex;
+	position: relative;
+	z-index: 2;
 }
 
 .body-content__information {
@@ -121,11 +123,12 @@ body {
 }
 
 .body-content__play {
+	min-width: 171px;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.5;
 	margin-bottom: 24px;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	gap: 16px;
 	position: relative;
@@ -138,6 +141,8 @@ body {
 	flex: 0 0 52px;
 	height: 52px;
 	border-radius: 50%;
+	position: relative;
+	z-index: 2;
 }
 
 .body-content__play::after {
@@ -148,18 +153,18 @@ body {
 	height: 52px;
 	width: 52px;
 	transform: scale(1.6);
-	opacity: 0.12;
+	opacity: 0.4;
 	position: absolute;
 	top: 0;
-	animation: play 1s linear infinite;
+	animation: play-big-circle 1.5s linear infinite;
 }
 
-@keyframes play {
+@keyframes play-big-circle {
 	0% {
-		transform: scale(1.6);
+		transform: scale(1);
 	}
 	100% {
-		transform: scale(2.5);
+		transform: scale(1.6);
 		opacity: 0;
 	}
 }
@@ -206,6 +211,8 @@ body {
 }
 
 .adventages-content {
+	position: relative;
+	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -239,7 +246,6 @@ body {
 
 .decor-main__item {
 	position: absolute;
-	z-index: 1;
 }
 
 .decor-main__item--1 {
@@ -256,7 +262,6 @@ body {
 	height: 284px;
 	left: -0.5%;
 	bottom: -9.3%;
-	z-index: 1;
 	opacity: 0.3;
 }
 
@@ -295,7 +300,6 @@ body {
 
 .page__about {
 	position: relative;
-	z-index: 2;
 }
 
 .about-block__container {
@@ -305,6 +309,8 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	row-gap: 20px;
+	position: relative;
+	z-index: 2;
 }
 
 .about-block__picture {
@@ -331,6 +337,7 @@ body {
 	font-weight: 700;
 	line-height: 1.5;
 	margin-bottom: 8px;
+	text-transform: uppercase;
 }
 
 .title-block__title {
@@ -375,7 +382,6 @@ body {
 	top: 22%;
 	left: 0%;
 	opacity: 0.8;
-	z-index: 1;
 }
 
 .decor-about__item--2 {
@@ -389,6 +395,17 @@ body {
 }
 
 .courses-block__container {
+	
+}
+
+.header-courses {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 60px;
+}
+
+.courses-block__cards {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
